@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 13,
-    color: Colors.greyDark,
+    color: Colors.black,
     paddingLeft: 10,
     letterSpacing: 1.2,
   },
