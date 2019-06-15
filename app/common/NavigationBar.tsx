@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { withNavigation, NavigationScreenProp } from 'react-navigation';
-import HamburgerMenuSvg from 'app/resources/svg/hamburger-menu';
+import HamburgerMenuSvg from 'app/resources/svg/hamburger';
 import LeftArrowIcon from 'app/resources/svg/left-arrow';
 import RefreshSvg from 'app/resources/svg/refresh';
 import CloseSvg from 'app/resources/svg/close';

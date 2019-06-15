@@ -1,7 +1,7 @@
 import React from 'react';
 import Svg, { Path } from 'react-native-svg';
 
-const LeftArrowIcon = props => (
+const LeftArrowIcon = () => (
   <Svg width="24" height="24" viewBox="0 0 24 24">
     <Path
       id="a"

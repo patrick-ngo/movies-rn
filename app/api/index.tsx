@@ -1,12 +1,9 @@
-import {
-  constructQueryWithParams,
-  get,
-} from 'app/api/api';
+import { constructQueryWithParams, get } from 'app/api/api';
 
-export const API_KEY = '328c283cd27bd1877d9080ccb1604c91'
-export const API_URL = 'https://api.themoviedb.org/3'
-export const BASE_URL_IMAGES_LOW = 'https://image.tmdb.org/t/p/w185'
-export const BASE_URL_IMAGES_HIGH = 'https://image.tmdb.org/t/p/w500'
+export const API_KEY = '328c283cd27bd1877d9080ccb1604c91';
+export const API_URL = 'https://api.themoviedb.org/3';
+export const BASE_URL_IMAGES_LOW = 'https://image.tmdb.org/t/p/w185';
+export const BASE_URL_IMAGES_HIGH = 'https://image.tmdb.org/t/p/w500';
 
 export const fetchMovieListAPI = async (page: number) => {
   const url = `${API_URL}/discover/movie?${constructQueryWithParams({

@@ -13,9 +13,9 @@ export const constructQueryWithParams = (params: any) =>
     .join('&');
 
 function getHeaders() {
-      return {
-        'Content-Type': 'application/json',
-      };
+  return {
+    'Content-Type': 'application/json',
+  };
 }
 
 const handleResponse = async (_: any, response: any) => {
@@ -32,7 +32,6 @@ const handleResponse = async (_: any, response: any) => {
     }
   }
 };
-
 
 export const post = async (url: string, body: any) => {
   const response = await fetch(url, {

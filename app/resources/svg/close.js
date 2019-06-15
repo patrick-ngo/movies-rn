@@ -23,7 +23,6 @@ const CloseSvg = props => (
 CloseSvg.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
-  fillColor: PropTypes.string
 };
 
 export default CloseSvg;
