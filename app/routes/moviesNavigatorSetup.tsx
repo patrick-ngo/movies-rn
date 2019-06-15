@@ -6,10 +6,11 @@ import {
 } from 'react-navigation';
 import { Colors, Routes } from 'app/constants';
 import { View } from 'react-native';
+import MovieListScreen from 'app/features/MovieListScreen';
 
 const moviesRouteConfig: NavigationRouteConfig = {
   [`${Routes.Root.movieList}`]: {
-    screen: View,
+    screen: MovieListScreen,
   },
   [`${Routes.Root.movieDetail}`]: {
     screen: View,
