@@ -11,8 +11,8 @@
     "lint": "yarn eslint",
     "fix": "yarn lint --fix",
     "postinstall": "rndebugger-open",
-    "ios-staging": "react-native run-ios --simulator='iPhone 8'",
-    "android-staging": "react-native run-android"
+    "ios-dev": "react-native run-ios --simulator='iPhone 8'",
+    "android-dev": "react-native run-android"
   },
   "dependencies": {
     "lodash": "4.17.11",
