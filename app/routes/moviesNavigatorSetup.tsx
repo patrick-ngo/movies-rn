@@ -5,15 +5,15 @@ import {
   StackNavigatorConfig,
 } from 'react-navigation';
 import { Colors, Routes } from 'app/constants';
-import { View } from 'react-native';
 import MovieListScreen from 'app/features/MovieListScreen';
+import MovieDetailScreen from 'app/features/MovieDetailScreen';
 
 const moviesRouteConfig: NavigationRouteConfig = {
   [`${Routes.Root.movieList}`]: {
     screen: MovieListScreen,
   },
   [`${Routes.Root.movieDetail}`]: {
-    screen: View,
+    screen: MovieDetailScreen,
   },
 };
 
