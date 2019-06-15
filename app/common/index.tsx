@@ -1,4 +1,3 @@
-export * from 'app/common/CustomTexts';
 export { default as NavigationBar } from 'app/common/NavigationBar';
 export {
   default as NavigationMenuButton,

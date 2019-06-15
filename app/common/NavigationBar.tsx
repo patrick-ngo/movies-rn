@@ -1,12 +1,11 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { withNavigation, NavigationScreenProp } from 'react-navigation';
-import HamburgerMenuSvg from 'app/resources/svg/hamburger';
+import { Colors } from 'app/constants';
+import { SeparatorLine, NavigationMenuButton } from 'app/common';
 import LeftArrowIcon from 'app/resources/svg/left-arrow';
 import RefreshSvg from 'app/resources/svg/refresh';
 import CloseSvg from 'app/resources/svg/close';
-import { Colors } from 'app/constants';
-import { SemiBoldText, SeparatorLine, NavigationMenuButton } from 'app/common';
 import KebabSvg from 'app/resources/svg/kebab';
 
 interface Props {
@@ -47,7 +46,6 @@ const NavigationBar: React.FC<Props> = (props: Props) => {
     grey,
   } = props;
 
-  // class NavigationBar extends React.Component {
   const onCloseButtonPress = () => {
     if (props.navigation) {
       props.navigation.pop();
@@ -57,12 +55,6 @@ const NavigationBar: React.FC<Props> = (props: Props) => {
   const handleOnBackButtonPress = () => {
     if (props.navigation) {
       props.navigation.goBack();
-    }
-  };
-
-  const onDrawerButtonPress = () => {
-    if (props.navigation) {
-      // props.navigation.openDrawer();
     }
   };
 
@@ -82,15 +74,14 @@ const NavigationBar: React.FC<Props> = (props: Props) => {
     }
     // Default title
     return (
-      <SemiBoldText
+      <Text
         style={[
           style.navigationTitle,
           centerTitle ? { textAlign: 'center' } : undefined,
         ]}
-        fontSize={16}
-        text={navigationTitle}
-        textAlign="center"
-      />
+      >
+        {navigationTitle}
+      </Text>
     );
   };
 
@@ -125,14 +116,8 @@ const NavigationBar: React.FC<Props> = (props: Props) => {
         />
       );
     }
-    // Drawer button (by default)
-    return (
-      <NavigationMenuButton
-        style={style.leftMenuButton}
-        handleMenuButtonPress={onLeftButtonPress || onDrawerButtonPress}
-        buttonImageElement={<HamburgerMenuSvg />}
-      />
-    );
+
+    return null;
   };
 
   const renderRightButton = () => {
@@ -230,6 +215,7 @@ const style = StyleSheet.create({
   },
   navigationTitle: {
     position: 'absolute',
+    fontSize: 16,
     flex: 1,
     left: 0,
     right: 0,
