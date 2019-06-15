@@ -19,7 +19,7 @@ const HamburgerMenuSvg = props => (
 HamburgerMenuSvg.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
-  fillColor: PropTypes.string
+  fillColor: PropTypes.string,
 };
 
 export default HamburgerMenuSvg;

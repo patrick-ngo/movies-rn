@@ -1,0 +1,6 @@
+locales
+package.json
+/app/package.json
+resources
+*.snap
+*.json
