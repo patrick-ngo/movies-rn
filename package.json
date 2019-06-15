@@ -1,0 +1,118 @@
+{
+  "name": "MoviesRN",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "reset-cache": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
+    "test": "jest --verbose",
+    "tsc": "tsc",
+    "eslint": "./node_modules/.bin/eslint 'app/**'",
+    "lint": "yarn eslint",
+    "fix": "yarn lint --fix",
+    "postinstall": "rndebugger-open",
+    "ios-staging": "react-native run-ios --simulator='iPhone 8'",
+    "android-staging": "react-native run-android"
+  },
+  "dependencies": {
+    "lodash": "4.17.11",
+    "moment": "^2.24.0",
+    "normalizr": "^3.3.0",
+    "react": "16.8.3",
+    "react-native": "0.59.8",
+    "react-native-elements": "^1.1.0",
+    "react-native-gesture-handler": "^1.0.15",
+    "react-native-i18n": "^2.0.15",
+    "react-native-iphone-x-helper": "^1.2.0",
+    "react-native-parsed-text": "^0.0.21",
+    "react-native-vector-icons": "^6.4.2",
+    "react-native-webview": "^3.2.1",
+    "react-navigation": "^3.0.9",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.7",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^1.0.0",
+    "string-format": "^2.0.0",
+    "string-hash": "^1.1.3",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/parser": "^7.4.4",
+    "@types/enzyme": "^3.1.13",
+    "@types/i18n-js": "^3.0.1",
+    "@types/jest": "^23.3.13",
+    "@types/lodash": "^4.14.120",
+    "@types/react": "^16.6.1",
+    "@types/react-native": "^0.57.32",
+    "@types/react-native-i18n": "^2.0.0",
+    "@types/react-navigation": "^3.0.1",
+    "@types/react-redux": "^7.0.1",
+    "@types/react-test-renderer": "^16.0.3",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.5.0",
+    "coveralls": "^3.0.2",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-import-resolver-reactnative": "^1.0.2",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-native": "^3.6.0",
+    "husky": "^1.1.3",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^24.8.0",
+    "jest-fetch-mock": "^2.1.0",
+    "metro-react-native-babel-preset": "0.54.0",
+    "node-fetch": "^2.3.0",
+    "prettier": "^1.16.1",
+    "react-dom": "^16.1.1",
+    "react-native-debugger-open": "^0.3.19",
+    "react-test-renderer": "16.8.3",
+    "redux-mock-store": "1.5.3",
+    "typescript": "^3.0.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleDirectories": [
+      "node_modules",
+      "."
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
+    ],
+    "transform": {
+      "^.+\\.(js|tsx?)$": "./node_modules/react-native/jest/preprocessor.js"
+    },
+    "testRegex": "(/__test__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/"
+    ],
+    "cacheDirectory": ".jest/cache"
+  },
+  "rnpm": {
+    "assets": [
+      "./app/resources/fonts/"
+    ]
+  }
+}
