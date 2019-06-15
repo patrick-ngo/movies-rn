@@ -1,4 +1,4 @@
-export const Exception = (status: any, message: any) => ({
+export const Exception = (status: number, message: string) => ({
   name: 'Exception',
   status,
   message,
@@ -22,7 +22,6 @@ const handleResponse = async (_: any, response: any) => {
   switch (response.status) {
     case 200:
       try {
-        // ServerTime.syncWithServerTime(response.headers.get('Date')); // Sync device time to server time
         return response.json();
       } catch (error) {
         // Log error in parsing json response
