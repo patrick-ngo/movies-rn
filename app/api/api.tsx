@@ -24,11 +24,11 @@ const handleResponse = async (_: any, response: any) => {
       try {
         return response.json();
       } catch (error) {
-        // Log error in parsing json response
+        // TODO: log error
         return null;
       }
     default: {
-      throw Exception(response.status, ''); // error 401 unauthorized
+      throw Exception(response.status, '');
     }
   }
 };

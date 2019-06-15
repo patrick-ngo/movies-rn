@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: Colors.greyDark,
     paddingLeft: 10,
-    // letterSpacing: 1.2,
   },
   posterContainer: {
     width: 50,
