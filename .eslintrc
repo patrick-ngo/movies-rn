@@ -1,0 +1,82 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "useJSXTextNode": true,
+    // "project": "./tsconfig.json", // https://github.com/typescript-eslint/typescript-eslint/issues/389
+    "tsconfigRootDir": "."
+  },
+
+
+  "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true,
+      "node": true,
+      "jasmine": true
+  },
+
+  "globals": {
+      "fetch": false
+  },
+
+  "plugins": [
+      "@typescript-eslint",
+      "react",
+      "react-native",
+      "prettier"
+  ],
+
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+
+
+  "settings": {
+      "import/resolver": {
+          "reactnative": true,
+          "eslint-import-resolver-typescript": true
+      },
+      "react": {
+          // https://github.com/yannickcr/eslint-plugin-react/issues/1751
+          "pragma": "React",
+          "version": "16.4" 
+      }
+  },
+
+  "rules": {
+      // Display all prettier errors
+      "prettier/prettier": "error",
+
+      // Disable a few @typescript-eslint/recommended rules that may not make sense for us
+      "@typescript-eslint/indent": 0,
+      "@typescript-eslint/no-unused-vars": [2, { "args": "none" }],
+      "@typescript-eslint/no-non-null-assertion": 0,
+      "@typescript-eslint/no-var-requires": 0,
+      "@typescript-eslint/no-use-before-define": 0,
+      "@typescript-eslint/no-explicit-any": 0,
+      "@typescript-eslint/explicit-member-accessibility": 0,
+      "@typescript-eslint/explicit-function-return-type": 0,
+
+      // https://github.com/airbnb/javascript/issues/1875
+      "react/no-did-update-set-state": 0, 
+
+      // These rules should be turned on but would require too much refactor now
+      "react/prop-types": ["error", { "ignore": ["navigation", "style"]}],
+      "react/destructuring-assignment": 0,
+      "react/require-default-props": 0,
+
+      // Allow creation of style object at end of file
+      "no-use-before-define": 0,
+
+      // Configuration rules
+      "no-restricted-imports": ["error", { "patterns": ["../*"] }], // Disallow relative paths
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }], // Use JSX inside .js files
+      "import/no-extraneous-dependencies": ["error", {"packageDir": "./"}], // https://github.com/benmosher/eslint-plugin-import/issues/458
+  },
+}
