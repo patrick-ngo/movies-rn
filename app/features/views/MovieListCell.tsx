@@ -51,13 +51,9 @@ const MovieListCell = (props: Props) => {
         {renderImage()}
         <View>
           {/* Movie title */}
-          <Text numberOfLines={1} style={styles.titleText}>
-            {title}
-          </Text>
+          <Text style={styles.titleText}>{title}</Text>
           {/* Genres */}
-          <Text numberOfLines={1} style={styles.genreText}>
-            {genres}
-          </Text>
+          <Text style={styles.genreText}>{genres}</Text>
         </View>
       </View>
     </TouchableHighlight>
@@ -81,7 +77,7 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 13,
     color: Colors.black,
-    paddingLeft: 10,
+    paddingHorizontal: 10,
     letterSpacing: 1.2,
   },
   genreText: {
@@ -94,7 +90,7 @@ const styles = StyleSheet.create({
     height: 50,
   },
   posterImage: {
-    borderRadius: 25,
+    borderRadius: 4,
     flex: 1,
     borderColor: Colors.greyBorder,
     borderWidth: 1,
