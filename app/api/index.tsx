@@ -1,6 +1,6 @@
 import { constructQueryWithParams, get } from 'app/api/api';
 
-export const API_KEY = '328c283cd27bd1877d9080ccb1604c91';
+export const API_KEY = 'e4a3bc287b929e12897dd730b1b153e9';
 export const API_URL = 'https://api.themoviedb.org/3';
 export const BASE_URL_IMAGES_LOW = 'https://image.tmdb.org/t/p/w185';
 export const BASE_URL_IMAGES_HIGH = 'https://image.tmdb.org/t/p/w500';
