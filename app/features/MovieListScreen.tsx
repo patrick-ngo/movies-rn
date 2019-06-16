@@ -21,6 +21,10 @@ const MovieListScreen: React.FC<Props> = (props: Props) => {
   const [numberOfPages, setNumberOfPages] = useState<number>(1);
   const [refreshing, setRefreshing] = useState<boolean>(false);
 
+  useEffect(() => {
+    fetchMovies();
+  }, [page, refreshing]);
+
   const fetchMovies = async () => {
     setLoading(true);
 
@@ -35,10 +39,6 @@ const MovieListScreen: React.FC<Props> = (props: Props) => {
       setRefreshing(false);
     }
   };
-
-  useEffect(() => {
-    fetchMovies();
-  }, [page, refreshing]);
 
   const handleRefresh = () => {
     // Refresh list
@@ -59,10 +59,10 @@ const MovieListScreen: React.FC<Props> = (props: Props) => {
   };
 
   const onPressMovie = (__?: number, movie?: Movie) => {
-    if (props.navigation) {
+    if (props.navigation && movie) {
       props.navigation.navigate({
         routeName: Routes.Root.movieDetail,
-        params: { movie },
+        params: { movieId: movie.id },
       });
     }
   };
